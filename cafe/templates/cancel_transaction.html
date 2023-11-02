@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Отмена транзакции</title>
+</head>
+<body>
+    <h1>Отмена транзакции</h1>
+    <form method="post" action="{% url 'cancel_transaction' transaction_id %}">
+        {% csrf_token %}
+        <label for="reason">Причина отмены:</label>
+        <textarea name="reason" id="reason" required></textarea>
+        <br>
+        <button type="submit">Отменить транзакцию</button>
+    </form>
+</body>
+</html>

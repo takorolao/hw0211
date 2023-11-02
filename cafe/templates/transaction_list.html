@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Транзакции</title>
+</head>
+<body>
+    <h1>Транзакции для кафе {{ cafe.name }}</h1>
+    <ul>
+        {% for transaction in transactions %}
+            <li>{{ transaction.amount }} рублей - {{ transaction.timestamp }}</li>
+        {% empty %}
+            <li>Нет доступных транзакций</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
